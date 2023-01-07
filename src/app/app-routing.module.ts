@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'conectar-apps',
+    loadChildren: () => import('./config/conectar-apps.module').then( m => m.ConectarAppsPageModule)
+  },
 ];
 
 @NgModule({
